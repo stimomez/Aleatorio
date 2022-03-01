@@ -1,5 +1,4 @@
 //rsc
-import quotes from '../quotes.json'
 
 
 const QuotesBox = ({messageOne, color}) => {

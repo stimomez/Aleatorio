@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import quotes from './quotes.json'
 import './App.css';
 import MessageTwo from './components/MessageTwo';
