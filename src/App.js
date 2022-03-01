@@ -36,7 +36,7 @@ function App() {
       
       <button  style={{background: rgbColor}} onClick={changeQuotes}><i className="fa-solid fa-angle-right" ></i></button>
          
-          </div>
+      </div>
   );
 }
 
