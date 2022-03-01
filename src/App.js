@@ -1,24 +1,42 @@
 import logo from './logo.svg';
+import quotes from './quotes.json'
 import './App.css';
+import MessageTwo from './components/MessageTwo';
+import QuotesBox from './components/QuotesBox';
+import { useState } from 'react';
 
+const getRamdon = () => Math.floor(Math.random() * quotes.length );
+
+const generateRandomColor = () =>{
+  const r = Math.floor(Math.random() * 256 );
+  const g = Math.floor(Math.random() * 256 );
+  const b = Math.floor(Math.random() * 256 );
+
+  const rgbColor = `rgb(${r},${g},${b})`;
+  return rgbColor;
+}
 function App() {
+  const [quote, setQuote] = useState(quotes[getRamdon()]);
+
+  const changeQuotes = ()=>{
+   return setQuote(quotes[getRamdon()])
+   
+    
+   
+  }
+  const rgbColor = generateRandomColor();
+  
+  document.body.style = `background: ${rgbColor}`
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="App" >
+      <QuotesBox messageOne={quote.quote} color={rgbColor} />
+      
+      <MessageTwo  messageTwo={quote.author} color={rgbColor}/>
+      
+      <button  style={{background: rgbColor}} onClick={changeQuotes}><i className="fa-solid fa-angle-right" ></i></button>
+         
+          </div>
   );
 }
 

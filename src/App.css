@@ -1,6 +1,46 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ 
 }
+body{
+  text-align: center;
+  align-items: center;
+}
+
+.App {
+ background: #ffffff;
+  border: 3px ;
+  width: 44em;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top:  50%;
+  left: 23%;
+  box-shadow: 2px 2px 8px  #282c34;
+}
+.messageOne i{
+ margin-top: 10px;
+  font-size: 2em;
+}
+
+.messageTwo{
+  text-align: end;
+  margin-right: 2em;
+
+ 
+}
+.App>button{
+  padding: 3px;
+  margin-bottom: 9px;
+  margin-left: 41em;
+width: 6%;
+
+border-radius: 50%;
+color: #FFFFFF;
+}
+
 
 .App-logo {
   height: 40vmin;
